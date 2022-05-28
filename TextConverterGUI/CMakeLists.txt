@@ -23,7 +23,7 @@ find_package(Qt6 COMPONENTS Gui REQUIRED)
 add_executable(TextConverterGUI
 	TextConverterForm.cpp
 	TextConverterForm.h
-	TextConverter.ui
+	TextConverterForm.ui
 	main.cpp 
  )
 

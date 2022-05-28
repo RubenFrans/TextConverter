@@ -51,7 +51,7 @@
 #include <QtGui>
 
 #include "rasterwindow.h"
-#include "TextConverter.h"
+
 
 //! [5]
 //class AnalogClockWindow : public RasterWindow
@@ -172,7 +172,7 @@ int main(int argc, char **argv)
     //AnalogClockWindow clock;
     //clock.show();
 
-    TextUI::TextConverter form{};
+    TextUI::TextConverterForm form{};
     form.show();
 
     return app.exec();
