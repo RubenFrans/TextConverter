@@ -20,6 +20,7 @@ namespace TextUI {
 		void on_rbToUtf_toggled(bool value);
 		void on_rbToCodePage_toggled(bool value);
 		void on_itxtOutputPath_textEdited(QString text);
+		void on_btnConvert_clicked();
 
 	private:
 		Ui::MainWindow ui;

@@ -36,8 +36,8 @@ void TextUI::TextConverterForm::on_btnLoadInput_clicked() {
 		 tr("txt Files (*.txt)"));
 
 	ui.inputFileLabel->setText(file);
+	m_InputFileString = file.toStdString();
 	ui.btnConvert->setEnabled(!file.isEmpty());
-
 }
 
 void TextUI::TextConverterForm::on_itxtOutputPath_textEdited(QString text) {
@@ -54,5 +54,30 @@ void TextUI::TextConverterForm::on_rbToUtf_toggled(bool value) {
 void TextUI::TextConverterForm::on_rbToCodePage_toggled(bool value) {
 
 	m_Utf8ToCodePage = value;
+
+}
+
+void TextUI::TextConverterForm::on_btnConvert_clicked() {
+
+	if (m_Utf8ToCodePage) {
+
+		if (m_OutputFileString.empty()) {
+
+			m_TextConverter.ConvertUTF8FileToCodePage(m_InputFileString);
+		}
+		else
+		{
+			m_TextConverter.ConvertUTF8FileToCodePage(m_InputFileString, m_OutputFileString);
+		}
+
+
+	}else if(m_CodePageToUtf8) {
+
+		if (m_OutputFileString.empty())
+			m_TextConverter.ConvertCodePageToUTF8(m_InputFileString);
+		else
+			m_TextConverter.ConvertCodePageToUTF8(m_InputFileString, m_OutputFileString);
+
+	}
 
 }
