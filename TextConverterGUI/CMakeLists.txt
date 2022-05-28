@@ -19,10 +19,13 @@ find_package(Qt6 COMPONENTS Network REQUIRED)
 find_package(Qt6 COMPONENTS Core REQUIRED)
 find_package(Qt6 COMPONENTS Gui REQUIRED)
 
+	#rasterwindow.cpp
 add_executable(TextConverterGUI
+	TextConverterForm.cpp
+	TextConverterForm.h
+	TextConverter.ui
 	main.cpp 
-	rasterwindow.cpp
-)
+ )
 
 # include TextConverter library
 target_include_directories(TextConverterGUI PUBLIC ${ToolLibraryIncDir})
@@ -55,6 +58,7 @@ target_link_libraries( TextConverterGUI PUBLIC
 install(TARGETS TextConverterGUI DESTINATION bin)
 install(FILES "c:/Program Files (x86)/Qt/bin/Qt6Cored.dll" DESTINATION bin)
 install(FILES "c:/Program Files (x86)/Qt/bin/Qt6Guid.dll" DESTINATION bin)
+install(FILES "c:/Program Files (x86)/Qt/bin/Qt6Widgetsd.dll" DESTINATION bin)
 install(FILES "C:/Program Files (x86)/Qt/plugins/platforms/qwindowsd.dll" DESTINATION bin/platforms)
 include(InstallRequiredSystemLibraries)
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")
