@@ -1,0 +1,6 @@
+# TextConverterCommandLineTool
+
+add_executable(TextConverterCommandLineTool main.cpp)
+#target_include_directories(TextConverterCommandLineTool PUBLIC ${ToolLibraryIncDir})
+target_include_directories(TextConverterCommandLineTool PUBLIC ${ToolLibraryIncDir})
+target_link_libraries(TextConverterCommandLineTool PUBLIC TextConverterLib)

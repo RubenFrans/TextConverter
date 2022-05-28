@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\School\Howest\GD2\ToolDevCpp\project\TextConverterLib\TextConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\School\Howest\GD2\ToolDevCpp\project\TextConverterLib\TextConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\School\Howest\GD2\ToolDevCpp\project\TextConverterLib\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{E50C37A8-0608-3E9F-9AD4-20CF6E1FEBFC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F3AC70A0-21E4-3C45-91E8-634578480CFB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
