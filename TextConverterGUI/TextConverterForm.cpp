@@ -52,9 +52,7 @@ void TextUI::TextConverterForm::on_rbToUtf_toggled(bool value) {
 
 
 void TextUI::TextConverterForm::on_rbToCodePage_toggled(bool value) {
-
 	m_Utf8ToCodePage = value;
-
 }
 
 void TextUI::TextConverterForm::on_btnConvert_clicked() {
@@ -70,14 +68,24 @@ void TextUI::TextConverterForm::on_btnConvert_clicked() {
 			m_TextConverter.ConvertUTF8FileToCodePage(m_InputFileString, m_OutputFileString);
 		}
 
-
-	}else if(m_CodePageToUtf8) {
+	} else if (m_CodePageToUtf8) {
 
 		if (m_OutputFileString.empty())
 			m_TextConverter.ConvertCodePageToUTF8(m_InputFileString);
 		else
 			m_TextConverter.ConvertCodePageToUTF8(m_InputFileString, m_OutputFileString);
-
 	}
+
+	ui.tableWidget->insertRow(ui.tableWidget->rowCount());
+	ui.tableWidget->setItem(ui.tableWidget->rowCount() - 1,
+		 0,
+		 new QTableWidgetItem(QString(m_InputFileString.c_str())));
+	ui.tableWidget->setItem(ui.tableWidget->rowCount() - 1,
+		1,
+		new QTableWidgetItem(QString(m_OutputFileString.c_str())));
+
+	ui.tableWidget->setItem(ui.tableWidget->rowCount() - 1,
+		2,
+		new QTableWidgetItem(QString("Converted")));
 
 }
