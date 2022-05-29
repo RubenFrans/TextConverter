@@ -10,7 +10,6 @@ TextUI::TextConverterForm::TextConverterForm()
 	ui.setupUi(this);
 }
 
-
 void TextUI::TextConverterForm::on_btnLoadInput_clicked() {
 	std::cout << "Clicked load button" << std::endl;
 

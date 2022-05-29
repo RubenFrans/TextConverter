@@ -15,3 +15,5 @@ add_subdirectory(TextConverterGUI)
 add_subdirectory(UnitTests)
 add_dependencies(TextConverterCommandLineTool UnitTestsRun)
 
+include(InstallRequiredSystemLibraries)
+include(CPack)
