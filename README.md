@@ -11,4 +11,4 @@ Test files can be found in de resource folder in this repository.
 ![image](https://user-images.githubusercontent.com/41028126/170859398-638e6013-965f-4218-97ed-30fd9a9208cc.png)
 
 ## Creating an NSIS installer
-Download the source code and create a build using cmake. The run the "cpack -C Debug" command from the build folder to generate and installer.
+Download the source code and create a build using cmake. The run the "cpack -C Debug" command from the build folder to generate an installer.
